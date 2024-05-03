@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Test from "@/app/_components/test";
 import Cursor from "@/app/_components/cursor";
+import TextScroll from "@/app/_components/text_scroll";
 
 export default function Home() {
   return (
@@ -113,6 +114,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <TextScroll/>
     </>
   );
 }
