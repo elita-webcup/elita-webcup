@@ -1,6 +1,5 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials"
-import {cookies} from "next/headers";
 import prisma from "../../prisma/db";
 import {compare} from "bcrypt";
 
@@ -22,26 +21,27 @@ export const handlers = NextAuth({
                     placeholder: "your-cool-password"
                 }
             },
-            async authorize(credentials): Promise<any> {
-                if (!credentials) return null;
-                const existingAgent = await prisma.agent.findUnique({
+            async authorize(credentials):Promise<any> {
+                if(!credentials) return null
+                const agent = await prisma.agent.findUnique({
                     where: { codeAgent: credentials.codeAgent },
                 });
-
-                if (!existingAgent) {
-                    return null;
+                if (!agent) {
+                    return null
                 }
-
-                const passwordMatch = await compare(credentials.password, existingAgent.password);
+                const passwordMatch = await compare(credentials.password, agent.password);
                 console.log(passwordMatch)
                 if (!passwordMatch) {
                     return null;
                 }
+                const user = {
+                    name:agent.codeAgent,
+                    id:agent.id,
+                    email:agent.email,
+                    image:agent.role
 
-                return {
-                    id: existingAgent.id,
-                    username: existingAgent.codeAgent,
                 }
+                return user
             },
         }),
     ],
@@ -54,6 +54,10 @@ export const handlers = NextAuth({
                 }
                 console.log(session)
                 return session;
-            }
+            },
+            async signIn({ user, account, profile, email, credentials}){
+
+                return true
+            },
         },
 })
