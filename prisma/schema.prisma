@@ -65,6 +65,8 @@ model Mission {
   objectif String
   dateStart DateTime
   status String
+  risque String
+  cost String
   ressource String
   assignation Assignation[]
 }
