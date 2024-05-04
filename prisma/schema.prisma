@@ -9,10 +9,10 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
-
 model Post {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
@@ -37,4 +37,48 @@ model User {
   name    String?
   posts   Post[]
   profile Profile?
+}
+
+model Agent {
+  id Int @id @default(autoincrement())
+  codeAgent String @unique
+  password String
+  email String
+  role String
+  assignation Assignation[]
+  choose Choose[]
+
+}
+
+model Assignation{
+  id Int @id @default(autoincrement())
+  agent Agent @relation(fields: [agentId],references: [id])
+  agentId Int
+  mission Mission @relation(fields: [missiontId],references: [id])
+  missiontId Int
+}
+
+model Mission {
+  id Int @id @default(autoincrement())
+  designation String
+  description String
+  objectif String
+  dateStart DateTime
+  status String
+  ressource String
+  assignation Assignation[]
+}
+
+model Equipment{
+  id Int @id @default(autoincrement())
+  designation String
+  choose Choose[]
+}
+
+model Choose{
+  id Int @id @default(autoincrement())
+  agent Agent @relation(fields: [agentId],references: [id])
+  agentId Int
+  equipment Equipment @relation(fields: [equipmentId],references: [id])
+  equipmentId Int
 }
