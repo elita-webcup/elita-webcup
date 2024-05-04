@@ -25,12 +25,12 @@ function Accueil(){
                 </div>
             </div>
             <div className={"flex"}>
-                <div className="w-[40%] h-[30%] mt-60 ml-40 space-y-3">
-                    <h1 className="text-white text-6xl font-bold">Bienvenue <span
-                        className="text-lime-500 text-6xl font-bold">{text1}</span></h1>
-                    <h1 className="text-lime-500 text-6xl font-bold ml-28">{text2}</h1>
+                <div className="w-[40%] h-[50%] ml-40 mt-10">
+                    <h1 className="text-white text-[80px] font-bold">Bienvenue</h1>
+                    <h1 className="text-lime-500 text-[80px] font-bold">{text1}</h1>
+                    <h1 className="text-white text-[80px] font-bold">{text2}</h1>
                 </div>
-                <div className={"inline mt-28"}>
+                <div className={"inline mt-10"}>
                     <Image
                         src="/avatar.gif"
                         width={500}
