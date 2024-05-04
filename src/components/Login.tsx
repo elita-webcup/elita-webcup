@@ -36,7 +36,7 @@ function Login() {
     }
     return (
         <div>
-            <form className='w-[80%]' onSubmit={handleSubmit(onSubmit)} >
+            {/* <form className='w-[80%]' onSubmit={handleSubmit(onSubmit)} >
                 <div className='w-full text-center text-green-900 font-bold text-xl my-5'>Se connecter</div>
                 <div className='h-16'>
                 </div>
@@ -69,8 +69,7 @@ function Login() {
                 <div className='w-full flex justify-center my-8'>
                     <button type="submit" className='bg-green-900 w-full h-10 rounded-lg text-center py-2 text-white shadow-sm'> Se connecter </button>
                 </div>
-            </form>
-
+            </form> */}
         </div>
     )
 }
