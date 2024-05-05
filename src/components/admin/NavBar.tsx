@@ -22,7 +22,7 @@ function NavBar() {
     const [open, setOpen] = useState(true)
     const path = usePathname()
     const menus = [
-        { name: "Dashboard", link: "/admin/dashboard", icon: <MdOutlineDashboard size={21} /> },
+        { name: "Dashboard", link: "/admin", icon: <MdOutlineDashboard size={21} /> },
         { name: "Missions", link: "/admin/missions", icon: <FaTasks size={21} /> },
         { name: "Agents", link: "/admin/agents", icon: <GiSpy size={21} /> },
         { name: "Equipements", link: "/admin/equipements", icon: <PiToolboxFill size={21} /> },
