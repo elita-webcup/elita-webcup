@@ -35,7 +35,7 @@ const Cursor = () => {
     }, []);
     return (
         <div id="custom-cursor" className="custom-cursor">
-            <div className="cursor-label  text-black">View</div>
+            <div className="cursor-label  dark:text-black text-black">View</div>
         </div>
     );
 };
