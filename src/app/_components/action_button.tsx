@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ActionButton = () => {
     return (
-        <Link  className=" group" href="">
+        <Link  className=" group" href="/mission">
            <button className="bg-[#84CC16] text-black flex space-x-2 items-center rounded-full px-6 py-3">
                <span>View my mission</span>
                <div className=" flex relative h-fit overflow-hidden">
