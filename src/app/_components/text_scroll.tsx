@@ -34,7 +34,7 @@ const TextScroll = () => {
     return (
         <div className="content-wrapper">
             <div className="your-text-wrapper-class flex justify-center items-center h-screen">
-                <h1 className="text-[7em] font-bold whitespace-nowrap text-wrapper transform translate-x-[70%] ">
+                <h1 className="text-[7em] font-bold whitespace-nowrap text-white text-wrapper transform translate-x-[70%] ">
                     A new way of designing ,discovering and sharing
                 </h1>
             </div>
