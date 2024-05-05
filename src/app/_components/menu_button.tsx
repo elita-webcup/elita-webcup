@@ -22,7 +22,7 @@ const MenuButton = () => {
                 <h1 className="text-white text-2xl font-bold">
                     .00
                 </h1>
-                <div className="flex items-center space-x-2 text-xl  " onClick={()=>{setOpen(true)}}>
+                <div className="flex items-center space-x-2 text-xl cursor-pointer  " onClick={()=>{setOpen(true)}}>
                     <CgMenuRight className="text-[#B2FF3C]"/>
                     <h2 className="text-[#84CC16] text-opacity-80">
                         Menu

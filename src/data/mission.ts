@@ -1,4 +1,4 @@
-export const missions = [
+export const missions:IMission[] = [
     {
         id: 1,
         designation: "Mission Alpha",
@@ -165,3 +165,15 @@ export const missions = [
         ressource: "Télescopes spatiaux, observatoires terrestres"
     }
 ]
+
+export interface IMission {
+    id:          number;
+    designation: string;
+    description: string;
+    objectif:    string;
+    dateStart:   string;
+    status:      string;
+    risque:      string;
+    cost:        string;
+    ressource:   string;
+}
