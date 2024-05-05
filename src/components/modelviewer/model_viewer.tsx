@@ -5,6 +5,7 @@ import React, {useEffect, useRef} from 'react';
 import { Mesh } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {roboto_mono} from "@/app/_components/font";
+import Link from "next/link";
 
 interface props{
     modelPath: string;
@@ -22,7 +23,7 @@ export function ModelViewer(){
                     <Canvas style={{height: '250px', width: '400px', paddingTop: '10px', paddingBottom: '10px'}}>
                         <EthereumModel modelPath="/drone3.glb"/>
                     </Canvas>
-                    <div className={"text-black ml-[30vw] h-14 pt-4 w-[39%] cursor-pointer rounded-md font-bold  px-10 bg-lime-500"}>Rappeler votre drone</div>
+                    <Link href={"/equipements/map"} className={"text-black ml-[30vw] h-14 pt-4 w-[39%] cursor-pointer rounded-md font-bold  px-10 bg-lime-500"}>Rappeler votre drone</Link>
                 </div>
                 <div className={"bg-gradient-radial pb-40 ml-8 from-gray-950 to-gray-800 basis-[40%] h-[80vh] rounded-2xl"}>
                     <Canvas style={{height: '500px', width: '400px', paddingTop: '10px', paddingBottom: '10px'}}>
