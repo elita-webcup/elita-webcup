@@ -27,24 +27,18 @@ const testimonials = [
     {
         quote:
             "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-        name: ".Excellence",
+        name: ".Courage",
         title: "Hamlet",
     },
     {
         quote: "All that we see or seem is but a dream within a dream.",
-        name: ".Excellence",
+        name: ".Détermination",
         title: "A Dream Within a Dream",
     },
     {
         quote:
             "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-        name: ".Excellence",
+        name: ".Professionalisme",
         title: "Pride and Prejudice",
-    },
-    {
-        quote:
-            "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-        name: ".Excellence",
-        title: "Moby-Dick",
     },
 ];

@@ -5,6 +5,7 @@ import Cursor from "@/app/_components/cursor";
 import {roboto, roboto_mono} from "@/app/_components/font";
 import MenuButton from "@/app/_components/menu_button";
 import React from "react";
+import Script from "next/script";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function RootLayout({
         {children}
         <Cursor />
       </body>
+      <Script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></Script>
     </html>
   );
 }

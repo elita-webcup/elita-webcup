@@ -7,7 +7,7 @@ const words = [
         text: "Veuillez",
     },
     {
-        text: "électionner",
+        text: "sélectionner",
     },
     {
         text: "une mission ",
