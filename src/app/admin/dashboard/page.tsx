@@ -19,7 +19,6 @@ function page() {
                                     25
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

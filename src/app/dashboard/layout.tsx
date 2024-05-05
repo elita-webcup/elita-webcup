@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {ReactNode} from "react";
+
 const Layout = ({
                     children,
                 }: Readonly<{

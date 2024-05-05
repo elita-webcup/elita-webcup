@@ -8,7 +8,6 @@ import React from "react";
 export default function Home() {
   return (
     <div className="bg-[#0d0d0d]">
-      <MenuButton />
       <div className="  flex justify-center items-center h-[80vh]">
         <HeaderCitation />
       </div>
