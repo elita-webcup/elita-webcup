@@ -8,7 +8,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="bg-[#000]">
+    <div className="bg-[#0d0d0d]">
       <MenuButton/>
       <div className="  flex justify-center items-center h-[80vh]">
           <HeaderCitation/>
@@ -16,7 +16,6 @@ export default function Home() {
       <div className="infinit-moving ">
         <InfiniteMoving/>
       </div>
-      <TextScroll/>
     </div>
   );
 }

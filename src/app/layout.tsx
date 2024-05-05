@@ -4,6 +4,7 @@ import "./globals.css";
 import Cursor from "@/app/_components/cursor";
 import {roboto, roboto_mono} from "@/app/_components/font";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={roboto.className + "overflow-hidden"} >
         {children}
         <Cursor />
       </body>

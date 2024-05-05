@@ -11,6 +11,7 @@ export function InfiniteMoving() {
                 items={testimonials}
                 direction="right"
                 speed="slow"
+                className="text-4xl font-bold"
             />
         </div>
     );

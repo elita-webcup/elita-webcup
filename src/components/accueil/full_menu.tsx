@@ -11,7 +11,7 @@ export default function FullMenuPage (){
     ]
 
     return (
-        <>
+        <div className="absolute top-0 left-0 right-0 bg-[#0d0d0d] z-50">
             <div className="absolute -z-1 top-16 left-40">
                 <h1 className={ roboto_mono.className + " text-gray-700 opacity-35 text-[150px] font-extrabold"}>Menu</h1>
             </div>
@@ -25,6 +25,6 @@ export default function FullMenuPage (){
                     ))
                 }
             </div>
-        </>
+        </div>
     )
 }
