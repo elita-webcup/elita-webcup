@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/app/_components/cursor";
 import {roboto, roboto_mono} from "@/app/_components/font";
+import MenuButton from "@/app/_components/menu_button";
+import React from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className + "overflow-hidden"} >
+      <body className={roboto.className + "overflow-hidden bg-[#0d0d0d]"} >
+      <MenuButton />
         {children}
         <Cursor />
       </body>
