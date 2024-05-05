@@ -49,3 +49,6 @@ a{
     text-wrap: balance;
   }
 }
+.phrase {
+  line-height: 1.1;
+}
