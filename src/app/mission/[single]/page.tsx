@@ -3,10 +3,6 @@ import {GlobeDemo} from "@/app/mission/[single]/_components/globe";
 import {roboto_mono} from "@/app/_components/font";
 import {TypewriterMission} from "@/components/ui/typewriter-mission";
 
-
-
-
-
 export default function Page({params}:{params:{single:string}}) {
     const mission = missions[parseInt(params.single)-1]
     const costWords = [

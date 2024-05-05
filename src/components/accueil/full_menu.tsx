@@ -8,9 +8,9 @@ import React from "react";
 import {usePathname} from "next/navigation";
 
 export const menuItems = [
-    {content: "HOME", numero: "1", href: "/"},
-    {content: "PROFILE", numero: "2", href: "/profile"},
-    {content: "DASHBOARD", numero: "3", href: "/dashboard"},
+    {content: "ACCEUILLE", numero: "1", href: "/"},
+    {content: "PROFIL", numero: "2", href: "/profile"},
+    {content: "EQUIPEMENT", numero: "3", href: "/equipements"},
     {content: "MISSION", numero: "4", href: "/mission"},
 ]
 

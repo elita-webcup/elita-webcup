@@ -15,7 +15,7 @@ const HeaderCitation = () => {
                             🚀 &nbsp; Votre prochaine mission est là.
                         </h4>
                     </div>
-                    <h1 className={ roboto_mono.className + " w-[22ch] text-7xl text-wrap"}>
+                    <h1 className={ roboto_mono.className + " w-[85%] text-6xl xxl:text-7xl  text-wrap"}>
                         Agent, prêt à relever le défi ?  <br/> <span className="text-[#84CC16]"> </span>
                         <span className="text-[#84CC16]">Votre  Mission</span> vous attend...
                     </h1>
