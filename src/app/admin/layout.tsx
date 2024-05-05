@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
     return (
         <>
-            <div className="flex w-screen">
+            <div className="flex w-screen bg-[#010c06] ">
                 <NavBar></NavBar>
                 <div className="w-full">
                     {children}
