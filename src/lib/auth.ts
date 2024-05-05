@@ -1,20 +1,16 @@
 import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials"
-import GitHubProvider from  "next-auth/providers/github"
 import prisma from "../../prisma/db";
 import {compare} from "bcrypt";
 
 
-// @ts-ignore
-// @ts-ignore
 export const handlers = NextAuth({
     providers: [
         CredentialsProvider({
             name: 'Credentials',
             id:"credentials",
             credentials:{
-                username: {
+                codeAgent: {
                     label:"email",
                     type:"text",
                     placeholder: "Type here your email"
@@ -26,30 +22,42 @@ export const handlers = NextAuth({
                 }
             },
             async authorize(credentials):Promise<any> {
-                const authResponse = await prisma.agent.findUnique({
-                    where:{codeAgent: credentials?.username}
-                })
-                if(!authResponse){
+                if(!credentials) return null
+                const agent = await prisma.agent.findUnique({
+                    where: { codeAgent: credentials.codeAgent },
+                });
+                if (!agent) {
                     return null
                 }
-                const passwordMatcher = await compare(credentials?.password!,authResponse.password!)
-                if (!passwordMatcher) {
-                    return null
+                const passwordMatch = await compare(credentials.password, agent.password);
+                console.log(passwordMatch)
+                if (!passwordMatch) {
+                    return null;
                 }
-
                 const user = {
-                    name:authResponse.codeAgent,
-                    id:authResponse.id,
-                    email:authResponse.email,
+                    name:agent.codeAgent,
+                    id:agent.id,
+                    email:agent.email,
+                    image:agent.role
+
                 }
                 return user
-            }
+            },
         }),
     ],
-    callbacks:{
-        async signIn({ user, account, profile, email, credentials}){
+    secret: process.env.NEXTAUTH_SECRET,
+    callbacks:
+        {
+            session: async ({ session, user }) => {
+                if (session?.user) {
+                    session.user.id = user.id
+                }
+                console.log(session)
+                return session;
+            },
+            async signIn({ user, account, profile, email, credentials}){
 
-            return true
+                return true
+            },
         },
-    },
 })
