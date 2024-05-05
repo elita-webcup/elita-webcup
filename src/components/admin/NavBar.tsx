@@ -28,11 +28,11 @@ function NavBar() {
         { name: "Equipements", link: "/admin/equipements", icon: <PiToolboxFill size={21} /> },
     ];
     return (
-        <div className={`h-[100vh] ${open ? "w-[250px]" : "w-[80px] "} duration-300 ease-in-out bg-[#041008] border-r sticky top-0 border-lime-500/20  `}  >
-            <div className=' flex items-center bg-[#0c1e12] justify-centerbg-white border-2  border-lime-500 w-6 h-6 rounded-full absolute -right-2 top-5 '>
-                <MdKeyboardArrowLeft onClick={() => setOpen(!open)} size={21} className={`${!open ? "rotate-180" : ""} duration-300 ease-in border-lime-500`} />
+        <div className={`h-[100vh] ${open ? "w-[350px]" : "w-[80px] "} shadow-[#80d391] shadow-sm backdrop-blur-3xl duration-300 ease-in-out bg-[#041008] border-r sticky top-0 border-lime-500/20 flex items-center rounded-tr-full rounded-br-full   `}  >
+            <div className=' flex items-center justify-centerbg-white border-2  border-lime-500 bg-[#041008] w-10 h-10 rounded-full absolute -right-5 top-[48%]  text-[#91af8d]'>
+                <MdKeyboardArrowLeft onClick={() => setOpen(!open)} size={30} className={`${!open ? "rotate-180" : ""} duration-300 ease-in border-lime-500`} />
             </div>
-            <ul className='w-[80%] m-auto p-0'>
+            <ul className='w-[75%] p-0'>
                 {
                     menus.map(menu => {
                         return (
