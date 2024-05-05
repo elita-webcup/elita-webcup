@@ -8,7 +8,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className="bg-[#0d0d0d]">
-      <div className="  flex justify-center items-center h-[80vh]">
+      <div className="flex justify-center items-start pt-24 h-[80vh]">
         <HeaderCitation />
       </div>
       <div className="infinit-moving ">

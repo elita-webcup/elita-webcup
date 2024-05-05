@@ -19,15 +19,19 @@ const MenuButton = () => {
                 </> : ''
             }
             <div className="flex justify-between items-center px-12 py-4">
-                <h1 className="text-white text-2xl font-bold">
+                <h1 className="text-white text-4xl font-bold">
                     .00
                 </h1>
-                <div className="flex items-center space-x-2 text-xl cursor-pointer  " onClick={()=>{setOpen(true)}}>
-                    <CgMenuRight className="text-[#B2FF3C]"/>
-                    <h2 className="text-[#84CC16] text-opacity-80">
-                        Menu
-                    </h2>
+                <div className="flex justify-center gap-8 items-center">
+                    <div id="ecoindex-badge"></div>
+                    <div className="flex items-center space-x-2 text-xl cursor-pointer  " onClick={()=>{setOpen(true)}}>
+                        <CgMenuRight className="text-[#B2FF3C]"/>
+                        <h2 className="text-[#84CC16] text-opacity-80">
+                            Menu
+                        </h2>
+                    </div>
                 </div>
+
             </div>
         </div>
     );
